@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				float: left;position: relative;width: 600px;height: 900px;
+				margin: 100px 100px;
+				overflow: hidden;
+			}
+			.box > *{
+				transition: 1s;
+				position: absolute;
+				left: 0px;
+				top: 0px;
+			}
+			.box h2{
+				color: white;
+				width: 200px;
+				transform: translateX(10px) translateY(250px);
+			}
+			.box p{
+				color: white;
+			}
+			.box p:nth-of-type(1){
+				transform: translateY(360px) translateX(-400px);
+			}
+			.box p:nth-of-type(2){
+				transform: translateY(390px) translateX(-400px);
+				transition: 1s 0.1s;
+			}
+			.box:hover p:nth-of-type(1){
+				transform: translateX(10px) translateY(360px);
+			}
+			.box:hover p:nth-of-type(2){
+				transform: perspective(500px) translateX(10px) translateY(390px);
+			}
+			.box:hover img{
+				transform: scale(1.2);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<img src="img/0.jpeg" />
+			<h2>李清照</h2>
+			<p class="p1">花自飘零水自流，一种相思，两处闲愁</p>
+			<p class="p2">此情无计可消除，才下眉头，却上心头</p>
+		</div>
+	</body>
+</html>
